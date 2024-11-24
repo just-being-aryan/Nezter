@@ -11,7 +11,7 @@ import { CardContainer,CardBody,CardItem } from "@/components/global/3d-card";
 import { CheckIcon } from "lucide-react";
 export default function Home() {
   return (
-      <main>
+      <main  className="flex items-center justify-center flex-col">
        <Navbar/>
        <section className = "h-screen w-full  bg-neutral-950 rounded-md  !overflow-visible relative flex flex-col items-center  antialiased">
         <div className = "absolute inset-0  h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_35%,#223_100%)]">
@@ -35,19 +35,19 @@ export default function Home() {
               </div>
             }
             ></ContainerScroll>
-        </div>
+          </div>
         </section>
         <InfiniteMovingCards
-        className = "md:mt-[18rem] mt-[-100px] "
+        className = "md:mt-[18rem] mt-[-100px]"
         items = {clients}
         direction = "right"
-        speed = "slow"
+        speed = "fast"
         
         />
         <section>
           <HeroParallax products = {products}></HeroParallax>
         </section>
-        <section className = "mt-[-500px]">
+        <section className = "mt-[-500px]" >
           <LampComponent/>
           <div className = "flex flex-wrap items-center justify-center flex-col md:flex-row gap-8 -mt-72">
             <CardContainer className = "inter-var">
@@ -56,7 +56,7 @@ export default function Home() {
                     translateZ="50"
                     className = "text-xl font-bold text-neutral-600 dark:text-white"
                     >
-                        Hobby
+                        Tester
                         <h2 className = "text-6xl">$0</h2>
                     </CardItem>
                     <CardItem
